@@ -89,6 +89,13 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--mute);font:14
 .rv{opacity:1}
 .js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
 .js .rv.in{opacity:1;transform:none}
+.thumbs{display:grid;gap:10px;margin:-6px -6px 20px}
+.thumbs.two .thumb{aspect-ratio:16/7}
+.thumb{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#000;aspect-ratio:16/10;position:relative}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .6s}
+.card:hover .thumb img{transform:scale(1.05)}
+.thumb span{position:absolute;left:8px;bottom:8px;font:700 10px var(--sans);letter-spacing:.12em;text-transform:uppercase;background:rgba(10,18,38,.85);color:var(--ivory);padding:5px 8px;border-radius:999px}
+
 @media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.strip div{animation:none}}
 @media(max-width:820px){.hero{grid-template-columns:1fr;padding:56px 24px 64px;gap:36px}.mono{order:-1;max-width:240px;aspect-ratio:1}nav a:not(.logo){margin-left:14px}nav .hide{display:none}section{padding:68px 0}body{font-size:17px}}
 </style>
@@ -136,10 +143,10 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--mute);font:14
 <h2 class="rv">What I'm building.</h2>
 <p class="sub rv">Each card says whether it's live or still on the way.</p>
 <div class="grid">
-<div class="card rv"><span class="pill live">Live</span><h3>TIMELESS Elegance Collection</h3>
+<div class="card rv"><div class="thumbs two"><a class="thumb" href="https://timelesselegancecollections.myshopify.com/"><img src="img/store.jpg" width="960" height="500" loading="lazy" alt="Screenshot of the TIMELESS Elegance Collection online store showing the Look expensive, every single day hero and a Sade-inspired Style Bible guide cover"><span>Online store</span></a><a class="thumb" href="https://selar.com/m/promise-michael2261361"><img src="img/selar.jpg" width="960" height="412" loading="lazy" alt="Screenshot of the Selar storefront listing TIMELESS digital style guides" ><span>Selar</span></a></div><span class="pill live">Live</span><h3>TIMELESS Elegance Collection</h3>
 <p>My own style brand around quiet, effortless elegance. Digital guides on wardrobes, beauty and hair care, sold through Selar and an online store, with the content made in-house.</p>
 <div class="links"><a href="https://linktr.ee/timeless_elegance_collection">Linktree</a><a href="https://selar.com/m/promise-michael2261361">Selar</a><a href="https://timelesselegancecollections.myshopify.com/">Store</a></div></div>
-<div class="card rv"><span class="pill live">Live</span><h3>Fixwell Handyman</h3>
+<div class="card rv"><div class="thumbs"><a class="thumb" href="https://dahboss-001.github.io/fixwell-handyman/"><img src="img/fixwell.jpg" width="960" height="600" loading="lazy" alt="Screenshot of the Fixwell Handyman website: Skilled artisans you can trust, booked in minutes, with a Book in 60 seconds card"><span>Live site</span></a></div><span class="pill live">Live</span><h3>Fixwell Handyman</h3>
 <p>A booking site for screened artisans: plumbers, electricians, carpenters and AC technicians. Describe the job, approve the quote, pay the artisan directly. Starting in Awka and Aba.</p>
 <div class="links"><a href="https://dahboss-001.github.io/fixwell-handyman/">Visit site</a></div></div>
 <div class="card rv"><span class="pill soon">Coming soon</span><h3>Kobochat</h3>
